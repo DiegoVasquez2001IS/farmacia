@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="rootEscritorio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="escritorio.EscritorioController">
+   <left>
+      <TreeView fx:id="treeViewItems" prefHeight="400.0" prefWidth="231.0" BorderPane.alignment="CENTER">
+         <TreeItem fx:id="sistemaItem" value="Sistema">
+             <children>
+                 <TreeItem fx:id="resumenItem" value="Resumen">
+                     <children>
+                         <TreeItem fx:id="resumenVentasItem" value="De Ventas" />
+                         <TreeItem fx:id="resumenProductosItem" value="De Productos" />
+                         <TreeItem fx:id="resumenClientesItem" value="De Clientes" />
+                         <TreeItem fx:id="existenciaMinimaItem" value="Existencia Minima" />
+                     </children>
+                 </TreeItem>
+                 <TreeItem fx:id="principalItem" value="Principal">
+                     <children>
+                         <TreeItem fx:id="proveedoresItem" value="Proveedores" />
+                         <TreeItem fx:id="presentacionesItem" value="Presentaciones" />
+                         <TreeItem fx:id="dolenciasItem" value="Dolencias" />
+                         <TreeItem fx:id="empleadosItem" value="Empleados" />
+                         <TreeItem fx:id="tipoPagoItem" value="Tipo de Pago" />
+                         <TreeItem fx:id="clientesItem" value="Clientes" />
+                         <TreeItem fx:id="colocacionesItem" value="Colocaciones" />
+                         <TreeItem fx:id="usuariosItem" value="Usuarios" />
+                         <TreeItem fx:id="nivelesItem" value="Niveles de Usuario" />
+                         <TreeItem fx:id="permisosItem" value="Permisos" />
+                     </children>
+                 </TreeItem>
+                 <TreeItem fx:id="posItem" value="Punto de Venta">
+                     <children>
+                         <TreeItem fx:id="ventasItem" value="Ventas" />
+                     </children>
+                 </TreeItem>
+
+                 <TreeItem fx:id="inventarioItem" value="Inventario">
+                     <children>
+                         <TreeItem fx:id="productosItem" value="Productos" />
+                         <TreeItem fx:id="comprasItem" value="Compras">
+                             <children>
+                                 <TreeItem fx:id="modificarCompraItem" value="Modificar Compra" />
+                                 <TreeItem fx:id="ingresoItem" value="Ingreso" />
+                             </children>
+                         </TreeItem>
+                         <TreeItem fx:id="devolucionesItem" value="Devoluciones" />
+                     </children>
+                 </TreeItem>
+                 <TreeItem fx:id="cerrarSesionItem" value="Cerrar sesion" />
+             </children>
+         </TreeItem>
+      </TreeView>
+   </left>
+</BorderPane>

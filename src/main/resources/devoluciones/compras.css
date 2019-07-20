@@ -1,0 +1,61 @@
+#btnComprar{
+    -fx-background-color: #F4511E;
+    -fx-text-fill: white;
+}
+
+.list-cell:empty{
+    -fx-background-color: transparent;
+}
+#hBoxCalculos{
+    -fx-background-color: white;
+}
+#areaListaCompras{
+    -fx-background-color: white;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+.table-view .column-header {
+    -fx-background-color:  #1E88E5;
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 2px 0px 2px 0px;
+}
+.table-view .table-cell{
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 10px 10px 5px;
+}
+.combo-box{
+    -fx-background-color: #1E88E5;
+}
+.combo-box .arrow{
+    -fx-background-color: white;
+}
+.combo-box .cell:selected{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.combo-box .list-view .list-cell{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.combo-box .list-view .list-cell:hover, .combo-box .list-view .list-cell:selected{
+    -fx-background-color: #1E88E5;
+}
+
+.toggle-button{
+    -fx-background-color: #1E88E5;
+}
+.toggle-button:selected{
+    -fx-background-color: #F4511E;
+}
+.text-field{
+    -fx-background-insets: 0;
+}
+

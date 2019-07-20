@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="600.0" stylesheets="@css/resumenVentas.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resumen.productos.ResumenController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="193.0" minHeight="56.0" prefHeight="50.0" vgrow="NEVER" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="350.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER">
+         <children>
+            <Label text="Resumen Productos">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="rdbVencidos" mnemonicParsing="false" selected="true" text="Ya Vencidos">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoResumenProductos" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets right="24.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="rdbAPunto" mnemonicParsing="false" text="A Punto de Vencerse" toggleGroup="$grupoResumenProductos">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Label text="Filtrar">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="16.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtFiltrar" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tblDatos" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="colIdProducto" prefWidth="75.0" text="Id Producto" />
+                <TableColumn fx:id="colNomProducto" prefWidth="75.0" text="Nombre " />
+                  <TableColumn fx:id="colVencimiento" prefWidth="75.0" text="Vencimiento" />
+                  <TableColumn fx:id="colStock" prefWidth="75.0" text="Stock" />
+                  <TableColumn fx:id="colPrecioVenta" prefWidth="75.0" text="Precio Venta" />
+                  <TableColumn fx:id="colProveedor" prefWidth="75.0" text="Proveedor" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <VBox.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

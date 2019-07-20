@@ -1,0 +1,32 @@
+.tree-cell{
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+.tree-cell:selected {
+    -fx-background-color: #90CAF9;
+}
+.tree-cell:hover{
+    -fx-background-color: #90CAF9;
+}
+.tree-cell:empty{
+    visibility: hidden;
+}
+/*
+.tree-cell:expanded .tree-disclosure-node .arrow {
+    -fx-shape: null;
+    -fx-background-color: null;
+    -fx-background-image: url("minus-arrow.png");
+}
+
+/*.tree-view, .tree-cell {
+    -fx-background-color: black ;
+    -fx-text-fill: white ;
+}
+
+.tree-cell:selected {
+    -fx-font-weight: bold ;
+}
+.tree-cell {
+    -fx-padding: 0.75em 0em 0.75em 0em ;
+}
+*/

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="rootCeldaCompras" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compras.CeldaComprasController">
+   <children>
+      <GridPane HBox.hgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="70.0" percentWidth="55.0" prefWidth="200.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="15.0" prefWidth="40.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" percentWidth="15.0" prefWidth="80.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblNombre">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </HBox>
+            <TextField fx:id="txtPrecio" style="-fx-background-insets: 0;" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCantidad" style="-fx-background-insets: 0;" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblSubtotal" text="0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</HBox>

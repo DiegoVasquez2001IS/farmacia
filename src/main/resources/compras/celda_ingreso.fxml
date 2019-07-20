@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="rootCeldaIngreso" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@celda_ingreso.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compras.CeldaIngresoController">
+   <children>
+      <GridPane prefWidth="550.0" HBox.hgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="70.0" percentWidth="45.0" prefWidth="200.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="12.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="12.0" prefWidth="40.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" percentWidth="12.0" prefWidth="80.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" percentWidth="19.0" prefWidth="80.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblNombre">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblSubtotal" text="0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </HBox>
+            <DatePicker fx:id="txtFechaVencimiento" editable="false" GridPane.columnIndex="4" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="lblPrecio" text="0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Label fx:id="lblCantidad" text="0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</HBox>

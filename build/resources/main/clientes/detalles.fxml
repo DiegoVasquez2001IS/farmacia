@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="rootClientes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientes.DetalleController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="17.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="401.0" minHeight="10.0" prefHeight="401.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Clientes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="Código">
+                     <HBox.margin>
+                        <Insets right="33.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigo" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="longCodigo" minHeight="-Infinity" minWidth="-Infinity" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="198.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="Nombre">
+                     <HBox.margin>
+                        <Insets right="27.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNombre" promptText="Obligatorio" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="longNombre" minHeight="-Infinity" minWidth="-Infinity" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="76.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="Apellidos">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtApellidos" promptText="Obligatorio" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="longApellidos" minHeight="-Infinity" minWidth="-Infinity" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="211.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="Dirección">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDireccion" promptText="Obligatorio" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="longDireccion" minHeight="-Infinity" minWidth="-Infinity" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="223.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="Sexo">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets right="35.0" />
+                     </padding>
+                  </Label>
+                  <RadioButton fx:id="rdbMasculino" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" selected="true" text="Masculino">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoSexo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdbFemenino" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Femenino" toggleGroup="$grupoSexo" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="211.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="DPI">
+                     <HBox.margin>
+                        <Insets right="62.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDpi" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="longDpi" minHeight="-Infinity" minWidth="-Infinity" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="248.0" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="NIT">
+                     <HBox.margin>
+                        <Insets right="62.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNit" promptText="Obligatorio" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="checkNit" mnemonicParsing="false" text="C/F">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </CheckBox>
+                  <Label fx:id="longNit" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="261.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="Teléfono">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTelefono" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="longTelefono" minHeight="-Infinity" minWidth="-Infinity" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="273.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" text="Celular">
+                     <HBox.margin>
+                        <Insets right="38.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCelular" promptText="Obligatorio" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="longCelular" minHeight="-Infinity" minWidth="-Infinity" text="2" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="btnGuardar" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Guardar">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCancelar" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>

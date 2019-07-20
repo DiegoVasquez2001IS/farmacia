@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="735.0" style="-fx-fit-to-width: true;" stylesheets="@css/resumenVentas.css" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="resumen.lucro.ResumenLucroController" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <GridPane prefHeight="782.0" prefWidth="720.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="143.0" minHeight="56.0" prefHeight="48.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="400.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <HBox id="hboxBotones" alignment="CENTER" prefHeight="52.0" prefWidth="704.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <RadioButton fx:id="rdbVentasDia" mnemonicParsing="false" text="Día">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="4.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tablaVentas" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rdbVentasSemana" mnemonicParsing="false" selected="true" text="Semana" toggleGroup="$tablaVentas">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" right="4.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="rdbVentasMes" mnemonicParsing="false" text="Mes" toggleGroup="$tablaVentas">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" right="4.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Desde">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="txtDeste">
+                           <HBox.margin>
+                              <Insets right="32.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <Label text="Hasta">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="txtHasta">
+                           <HBox.margin>
+                              <Insets right="16.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <Button fx:id="btnVer" mnemonicParsing="false" text="Ver" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="16.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="16.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label text="Total">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="24.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblTotal" text="334562.23">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="16.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <LineChart fx:id="grapDatos" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="749.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="yAxis" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" fx:id="xAxis" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </VBox>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" />
+               </GridPane.margin>
+            </HBox>
+         </children>
+      </GridPane>
+   </content>
+</ScrollPane>

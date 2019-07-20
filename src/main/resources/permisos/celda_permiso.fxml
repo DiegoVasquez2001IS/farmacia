@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="rootCeldaPermisos" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@celda_permisos.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="permisos.CeldaPermisoController">
+   <children>
+      <GridPane HBox.hgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="70.0" percentWidth="60.0" prefWidth="200.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" prefWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblNombre">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <CheckBox fx:id="checkLectura" mnemonicParsing="false" style="-fx-background-insets: 0;" stylesheets="@celda_permisos.css" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <CheckBox fx:id="checkEscritura" mnemonicParsing="false" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</HBox>
